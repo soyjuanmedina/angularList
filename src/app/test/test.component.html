@@ -1,0 +1,6 @@
+<app-list [headers]="headers" [customers]="costumers" [options]="options" (create)="create()"
+    (update)="update($event)" (delete)="delete($event)" (select)="select($event)">
+</app-list>
+
+<button type="button" [disabled]="!selectedCostumer" pButton icon="pi pi-info-circle"
+    label="Aceptar" (click)="setSelectedCostumer()"></button>

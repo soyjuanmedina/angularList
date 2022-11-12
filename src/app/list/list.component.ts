@@ -5,44 +5,48 @@ import { Table } from 'primeng/table';
 import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
-  selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+    selector: 'app-list',
+    templateUrl: './list.component.html',
+    styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
 
-  @Input() headers: any;
-  @Input() customers: any;
-  @Input() options: any;
-  @Output() create = new EventEmitter<any>();
-  @Output() update = new EventEmitter<any>();
-  @Output() delete = new EventEmitter<any>();
+    @Input() headers: any;
+    @Input() customers: any;
+    @Input() options: any;
+    @Output() create = new EventEmitter<any>();
+    @Output() update = new EventEmitter<any>();
+    @Output() delete = new EventEmitter<any>();
+    @Output() select = new EventEmitter<any>();
 
-  selectedCustomers: Customer[] = [];
+    selectedCustomers: Customer[] = [];
 
-  representatives: Representative[] = [];
+    representatives: Representative[] = [];
 
-  statuses: any[] = [];
+    statuses: any[] = [];
 
-  loading: boolean = false;
+    loading: boolean = false;
 
-  constructor(private customerService: CustomerService, private primengConfig: PrimeNGConfig) {
-    console.log('conts', this.update.observers.length);
-  }
+    constructor(private customerService: CustomerService, private primengConfig: PrimeNGConfig) {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
-  emitCreate() {
-    this.create.emit();
-  }
+    emitCreate() {
+        this.create.emit();
+    }
 
-  emitUpdate(costumer: any) {
-    this.update.emit(costumer);
-  }
+    emitUpdate(costumer: any) {
+        this.update.emit(costumer);
+    }
 
-  emitDelete(costumer: any) {
-    this.delete.emit(costumer);
-  }
+    emitDelete(costumer: any) {
+        this.delete.emit(costumer);
+    }
+
+    emitSelect(costumer: any) {
+        this.select.emit(costumer);
+    }
 
 }

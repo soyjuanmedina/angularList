@@ -19,28 +19,31 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { DropdownModule } from 'primeng/dropdown';
 import { ListComponent } from './list/list.component';
+import { TestComponent } from './test/test.component';
+import { DialogService } from 'primeng/dynamicdialog';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    TableModule,
-    CalendarModule,
-    SliderModule,
-    DialogModule,
-    MultiSelectModule,
-    ContextMenuModule,
-    DropdownModule,
-    ButtonModule,
-    ToastModule,
-    InputTextModule,
-    ProgressBarModule,
-    HttpClientModule,
-    FormsModule
-  ],
-  declarations: [AppComponent, ListComponent],
-  bootstrap: [AppComponent],
-  providers: [CustomerService]
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        TableModule,
+        CalendarModule,
+        SliderModule,
+        DialogModule,
+        MultiSelectModule,
+        ContextMenuModule,
+        DropdownModule,
+        ButtonModule,
+        ToastModule,
+        InputTextModule,
+        ProgressBarModule,
+        HttpClientModule,
+        FormsModule
+    ],
+    declarations: [AppComponent, ListComponent, TestComponent],
+    bootstrap: [AppComponent],
+    providers: [CustomerService, DialogService, MessageService]
 })
 
 export class AppModule { }
