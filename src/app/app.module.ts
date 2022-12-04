@@ -18,7 +18,7 @@ import { ToastModule } from 'primeng/toast';
 import { InputTextModule } from 'primeng/inputtext';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { DropdownModule } from 'primeng/dropdown';
-import { ListComponent } from './list/list.component';
+import { ListComponent } from '@list/list.component';
 import { TestComponent } from './test/test.component';
 import { DialogService } from 'primeng/dynamicdialog';
 import { MessageService } from 'primeng/api';

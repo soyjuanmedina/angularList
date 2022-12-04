@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: red;
+    z-index: 1200;
+    position: relative;
+}
+
+/* p-dynamicdialog {
+    z-index: -5;
+} */
+
+.p-element {
+    z-index: 1300;
+}

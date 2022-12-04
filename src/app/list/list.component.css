@@ -1,0 +1,7 @@
+:host {
+    font-variant: all-small-caps;
+}
+
+.p-element {
+    z-index: 1300;
+}

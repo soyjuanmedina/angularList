@@ -3,6 +3,11 @@
     "compileOnSave": false,
     "compilerOptions": {
         "baseUrl": "./",
+        "paths": {
+            "@list/*": [
+                "src/app/list/*"
+            ]
+        },
         "outDir": "./dist/out-tsc",
         "strictPropertyInitialization": false,
         "forceConsistentCasingInFileNames": true,

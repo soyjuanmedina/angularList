@@ -3,6 +3,7 @@ import { MessageService } from 'primeng/api';
 import { DialogService } from 'primeng/dynamicdialog';
 import { DynamicDialogRef } from 'primeng/dynamicdialog';
 import { TestComponent } from "./test/test.component";
+import { ListComponent } from "./list/list.component";
 
 @Component({
     selector: 'app-root',
@@ -17,11 +18,9 @@ export class AppComponent {
     ref: DynamicDialogRef;
 
     show() {
-        this.ref = this.dialogService.open(TestComponent, {
+        this.ref = this.dialogService.open(ListComponent, {
             header: 'Choose a Product',
             width: '70%',
-            contentStyle: { "max-height": "500px", "overflow": "auto" },
-            baseZIndex: 10000
         });
         this.ref.onClose.subscribe((costumer: any) => {
             if (costumer) {
